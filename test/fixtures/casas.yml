@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  metragem: 1
+  local: MyString
+  dormitorios: 1
+  suites: 1
+  banheiro: 1
+  garagem: 1
+  preco: 1.5
+  condominio: 1.5
+  desconto_num: 1
+
+
+two:
+  metragem: 1
+  local: MyString
+  dormitorios: 1
+  suites: 1
+  banheiro: 1
+  garagem: 1
+  preco: 1.5
+  condominio: 1.5
+  desconto_num: 1
+

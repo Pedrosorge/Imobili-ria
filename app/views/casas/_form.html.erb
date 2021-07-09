@@ -1,0 +1,64 @@
+<%= form_with(model: casa, :html => {onsubmit:"return validacao()"}) do |form| %>
+    <% if casa.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(casa.errors.count, "error") %> prohibited this casa from being saved:</h2>
+
+        <ul>
+          <% casa.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :metragem %>
+      <%= form.number_field :metragem %>
+    </div>
+
+    <div class="field">
+      <%= form.label :local %>
+      <%= form.text_field :local %>
+    </div>
+
+    <div class="field">
+      <%= form.label :dormitorios %>
+      <%= form.number_field :dormitorios %>
+    </div>
+
+    <div class="field">
+      <%= form.label :suites %>
+      <%= form.number_field :suites %>
+    </div>
+
+    <div class="field">
+      <%= form.label :banheiro %>
+      <%= form.number_field :banheiro %>
+    </div>
+
+    <div class="field">
+      <%= form.label :garagem %>
+      <%= form.number_field :garagem %>
+    </div>
+
+    <div class="field">
+      <%= form.label :preco %>
+      <%= form.text_field :preco %>
+    </div>
+
+    <div class="field">
+      <%= form.label :condominio %>
+      <%= form.text_field :condominio %>
+    </div>
+
+    <div class="field">
+      <%= form.label :desconto_num%>
+      <%= form.text_field :desconto_num %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    
+    </div>
+
+<% end %>

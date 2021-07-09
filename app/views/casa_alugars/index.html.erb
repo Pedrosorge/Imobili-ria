@@ -1,0 +1,71 @@
+<style>
+
+body{
+  background-color:#878c91;
+}
+.tabela{
+  border-radius: 10px;
+  color:white;
+  background-color:black;
+  
+}
+.cabeçalho{
+    text-align: center;
+    border-radius: 10px;
+    border-width: auto;
+    border-style: outset;
+    border-color:red;
+    background-color:black;
+}
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Casas para Alugar</h1>
+
+<div class="tabela">
+  
+  <table >
+    <thead>
+      <tr>
+        <th class="cabeçalho">Local</th>
+        <th class="cabeçalho">Metragem</th>
+        <th class="cabeçalho">Banheiros</th>
+        <th class="cabeçalho">Suites</th>
+        <th class="cabeçalho">Cozinhas</th>
+        <th class="cabeçalho">Quartos</th>
+        <th class="cabeçalho">Salas</th>
+        <th class="cabeçalho">Garagem</th>
+        <th class="cabeçalho">Preco</th>
+        <th class="cabeçalho">Condominio</th>
+        <th class="cabeçalho">Desconto</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @casa_alugars.each do |casa_alugar| %>
+        <tr>
+          <td class="cabeçalho"><%= casa_alugar.local %></td>
+          <td class="cabeçalho"><%= casa_alugar.metragem %></td>
+          <td class="cabeçalho"><%= casa_alugar.banheiros %></td>
+          <td class="cabeçalho"><%= casa_alugar.suites %></td>
+          <td class="cabeçalho"><%= casa_alugar.cozinhas %></td>
+          <td class="cabeçalho"><%= casa_alugar.quartos %></td>
+          <td class="cabeçalho"><%= casa_alugar.salas %></td>
+          <td class="cabeçalho"><%= casa_alugar.garagem %></td>
+          <td class="cabeçalho"><%= casa_alugar.preco %></td>
+          <td class="cabeçalho"><%= casa_alugar.condominio %></td>
+          <td class="cabeçalho"><%= casa_alugar.desconto %></td>
+          <td class="cabeçalho"><%= link_to 'Show', casa_alugar %></td>
+          <td class="cabeçalho"><%= link_to 'Edit', edit_casa_alugar_path(casa_alugar) %></td>
+          <td class="cabeçalho"><%= link_to 'Destroy', casa_alugar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+<%= link_to 'New Casa Alugar', new_casa_alugar_path %>

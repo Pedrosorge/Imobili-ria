@@ -1,0 +1,77 @@
+</html>
+<style>
+
+body{
+  background-color:#878c91;
+}
+.tabela{
+  border-radius: 10px;
+  color:white;
+  background-color:black;
+  
+}
+.cabeçalho{
+    text-align: center;
+    border-radius: 10px;
+    border-width: auto;
+    border-style: outset;
+    border-color:red;
+    background-color:black;
+}
+</style>
+
+<body>
+<div class="body">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Casas para Comprar</h1>
+
+<div class="tabela">
+<table>
+  <thead>
+    <tr>
+      <th class="cabeçalho">Metragem</th>
+      <th class="cabeçalho">Local</th>
+      <th class="cabeçalho">Dormitorios</th>
+      <th class="cabeçalho">Suites</th>
+      <th class="cabeçalho">Banheiro</th>
+      <th class="cabeçalho">Garagem</th>
+      <th class="cabeçalho">Preco</th>
+      <th class="cabeçalho">Condominio</th>
+      <th class="cabeçalho">Desconto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @casas.each do |casa| %>
+      <tr>
+        <td > <%= casa.metragem %> </td>
+        <td> <%= casa.local %> </td>
+        <td> <%= casa.dormitorios %> </td>
+        <td> <%= casa.suites %> </td>
+        <td> <%= casa.banheiro %> </td>
+        <td> <%= casa.garagem %> </td>
+        <td> <%= casa.preco %> </td>
+        <td> <%= casa.condominio %> </td>
+        <td> <%= casa.desconto_num %> </td>
+        <td> <%= link_to 'Show', casa %> </td>
+        <td> <%= link_to 'Edit', edit_casa_path(casa) %> </td>
+        <td> <%= link_to 'Destroy', casa, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+
+<br>
+
+<%= link_to 'New Casa', new_casa_path %>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<style>
+
+body{
+  background-color:red;
+}
+</style>
+
+<body>
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>Metragem:</strong>
+    <%= @casa.metragem %>
+  </p>
+  
+  <p>
+    <strong>Local:</strong>
+    <%= @casa.local %>
+  </p>
+  
+  <p>
+    <strong>Dormitorios:</strong>
+    <%= @casa.dormitorios %>
+  </p>
+  
+  <p>
+    <strong>Suites:</strong>
+    <%= @casa.suites %>
+  </p>
+  
+  <p>
+    <strong>Banheiro:</strong>
+    <%= @casa.banheiro %>
+  </p>
+  
+  <p>
+    <strong>Garagem:</strong>
+    <%= @casa.garagem %>
+  </p>
+  
+  <p>
+    <strong>Preco:</strong>
+    <%= @casa.preco %>
+  </p>
+  
+  <p>
+    <strong>Condominio:</strong>
+    <%= @casa.condominio %>
+  </p>
+  
+  <p>
+    <strong>Desconto:</strong>
+    <%= @casa.desconto_num %>
+  </p>
+  
+  
+  <%= link_to 'Edit', edit_casa_path(@casa) %> |
+  <%= link_to 'Back', casas_path %>
+</body>

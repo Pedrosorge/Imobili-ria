@@ -1,0 +1,73 @@
+<%= form_with(model: casa_alugar) do |form| %>
+  <% if casa_alugar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(casa_alugar.errors.count, "error") %> prohibited this casa_alugar from being saved:</h2>
+
+      <ul>
+        <% casa_alugar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :local %>
+    <%= form.text_field :local %>
+  </div>
+
+  <div class="field">
+    <%= form.label :metragem %>
+    <%= form.text_field :metragem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :banheiros %>
+    <%= form.number_field :banheiros %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suites %>
+    <%= form.number_field :suites %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cozinhas %>
+    <%= form.number_field :cozinhas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quartos %>
+    <%= form.number_field :quartos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salas %>
+    <%= form.number_field :salas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :garagem %>
+    <%= form.number_field :garagem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :preco %>
+    <%= form.text_field :preco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :condominio %>
+    <%= form.text_field :condominio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desconto %>
+    <%= form.text_field :desconto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  
+<% end %>
