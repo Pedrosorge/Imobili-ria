@@ -20,8 +20,6 @@ class CasasController < ApplicationController
 
   end
 
-  
-
   # POST /casas or /casas.json
   def create
 

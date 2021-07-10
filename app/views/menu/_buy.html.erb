@@ -17,6 +17,7 @@
     height: auto;
 }
 .corpo{
+    border-radius:5px;
     background-color: brown;
     width: 100%;
     height: auto;
@@ -34,8 +35,8 @@ td{
 img{
     margin-bottom:-10px;
     margin-left:-6px;
-    width:140px;
-    height:90px;
+    width:125px;
+    height:110px;
 }
 
 </style>
@@ -52,7 +53,15 @@ img{
         </p>
     </div>
 
-    <table class="corpo">
+    <a href="/">
+        <button style="background-color: black; border-radius: 10px; margin-top: 10px; margin-bottom:10px;">
+            <p style="color: rgb(255, 255, 255);">
+            Voltar para o menu
+            </p>
+        </button>
+    </a>
+
+    <table class="corpo" >
 
         <tr>
                     
@@ -85,154 +94,52 @@ img{
                  do <br>
                 condomínio
             </td>
+            <td>
+                Desconto
+            </td>
 
-        </tr>                   
-                
+        </tr>          
 
-
+            <% Casa.all.each do |casa|%>
                 <tr>
                     <td class="image">
-                        <a href="/_buy/casa">
-                            <img src="assets/sem_imagem.png">
-                        </a>
-                    </td>
-                    <td >
-                        ???
-                    </td>
-                    <td >
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                </tr>
-
-                <tr> 
-                    
-                    <td>
                         <a href="/_buy/casa">
                             <img src="assets/paisagem1.jpg">
                         </a>
                     </td>
-                    <td>
-                        ???
+                    <td >
+                        <%= casa.metragem %>m²
+                    </td>
+                    <td >
+                        <%= casa.local %>
                     </td>
                     <td>
-                        ???
+                        <%= casa.dormitorios %>
                     </td>
                     <td>
-                        ???
+                        <%= casa.suites %>
                     </td>
                     <td>
-                        ???
+                        <%= casa.banheiro %>
                     </td>
                     <td>
-                        ???
+                        <%= casa.garagem %>
                     </td>
                     <td>
-                        ???
+                        R$<%= casa.preco %>
                     </td>
                     <td>
-                        ???
+                        R$<%= casa.condominio %>
                     </td>
                     <td>
-                        ???
+                        <%= casa.desconto_num %>%
                     </td>
-                
-                </tr>
 
-                <tr> 
-                    
-                    <td>
-                        <a href="/_buy/casa">
-                            <img src="assets/paisagem2.jpg">
-                        </a>
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                
                 </tr>
-
-                <tr> 
-                    
-                    <td>
-                        <a href="/_buy/casa">
-                            <img src="assets/paisagem3.jpg">
-                        </a>
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                
-                </tr>
-
+  
+            <%end%>
         </table>
 
-    <a href="/">
-        <button style="background-color: black; border-radius: 10px; margin-top: 10px;">
-            <p style="color: rgb(255, 255, 255);">
-            Voltar para o menu
-            </p>
-        </button>
-    </a>
-
+    
 </body>
 </html>

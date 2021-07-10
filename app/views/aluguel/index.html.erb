@@ -17,6 +17,7 @@
     height: auto;
 }
 .corpo{
+    border-radius:5px;
     background-color: brown;
     width: 100%;
     height: auto;
@@ -34,7 +35,7 @@ td{
 img{
     margin-bottom:-10px;
     margin-left:-6px;
-    max-width:115px;
+    max-width:104px;
     height:90px;
 }
 
@@ -51,6 +52,17 @@ img{
             Bem vindo à aba aluga-se!
         </p>
     </div>
+
+    <a href="/">
+        <button style="background-color: black; border-radius: 10px; margin-top: 10px;margin-bottom:10px;">
+            <p style="color: rgb(255, 255, 255);">
+            Voltar para o menu
+            </p>
+        </button>
+    </a>     
+
+
+
 
     <table class="corpo">
 
@@ -91,10 +103,12 @@ img{
                  do <br>
                 condomínio
             </td>
-
+            <td>
+                Desconto
+            </td>
         </tr>                   
-                
-
+           
+        <% CasaAlugar.all.each do |casa_alugar| %>
 
                 <tr>
                     <td class="image">
@@ -103,86 +117,44 @@ img{
                         </a>
                     </td>
                     <td >
-                        ???
+                        <%= casa_alugar.metragem %>m²
                     </td>
                     <td >
-                        ???
+                        <%= casa_alugar.local %>
                     </td>
                     <td>
-                        ???
+                        <%= casa_alugar.quartos %>
                     </td>
                     <td>
-                        ???
+                        <%= casa_alugar.suites %>
                     </td>
                     <td>
-                        ???
+                        <%= casa_alugar.banheiros %>
                     </td>
                     <td>
-                        ???
+                        <%= casa_alugar.garagem %>
                     </td>
                     <td>
-                        ???
+                        <%= casa_alugar.cozinhas %>
                     </td>
                     <td>
-                        ???
+                        <%= casa_alugar.salas%>
                     </td>
                     <td>
-                        ???
+                        R$<%= casa_alugar.preco %>
                     </td>
                     <td>
-                        ???
+                        R$<%= casa_alugar.condominio %>
+                    </td>
+                    <td>
+                        <%= casa_alugar.desconto %>%
                     </td>
                 </tr>
 
-                <tr> 
-                    
-                    <td>
-                        <a href="/_buy/casa">
-                            <img src="assets/paisagem1.jpg">
-                        </a>
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                    <td>
-                        ???
-                    </td>
-                
-                </tr>
+            <%end%>
 
-        </table>
 
-    <a href="/">
-        <button style="background-color: black; border-radius: 10px; margin-top: 10px;">
-            <p style="color: rgb(255, 255, 255);">
-            Voltar para o menu
-            </p>
-        </button>
-    </a>
+    
 
 </body>
 </html>

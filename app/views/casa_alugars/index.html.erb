@@ -46,22 +46,23 @@ body{
     <tbody>
       <% @casa_alugars.each do |casa_alugar| %>
         <tr>
-          <td class="cabeçalho"><%= casa_alugar.local %></td>
-          <td class="cabeçalho"><%= casa_alugar.metragem %></td>
-          <td class="cabeçalho"><%= casa_alugar.banheiros %></td>
-          <td class="cabeçalho"><%= casa_alugar.suites %></td>
-          <td class="cabeçalho"><%= casa_alugar.cozinhas %></td>
-          <td class="cabeçalho"><%= casa_alugar.quartos %></td>
-          <td class="cabeçalho"><%= casa_alugar.salas %></td>
-          <td class="cabeçalho"><%= casa_alugar.garagem %></td>
-          <td class="cabeçalho"><%= casa_alugar.preco %></td>
-          <td class="cabeçalho"><%= casa_alugar.condominio %></td>
-          <td class="cabeçalho"><%= casa_alugar.desconto %></td>
-          <td class="cabeçalho"><%= link_to 'Show', casa_alugar %></td>
-          <td class="cabeçalho"><%= link_to 'Edit', edit_casa_alugar_path(casa_alugar) %></td>
-          <td class="cabeçalho"><%= link_to 'Destroy', casa_alugar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= casa_alugar.local %></td>
+          <td><%= casa_alugar.metragem %></td>
+          <td><%= casa_alugar.banheiros %></td>
+          <td><%= casa_alugar.suites %></td>
+          <td><%= casa_alugar.cozinhas %></td>
+          <td><%= casa_alugar.quartos %></td>
+          <td><%= casa_alugar.salas %></td>
+          <td><%= casa_alugar.garagem %></td>
+          <td><%= casa_alugar.preco %></td>
+          <td><%= casa_alugar.condominio %></td>
+          <td><%= casa_alugar.desconto %></td>
+          <td><%= link_to 'Show', casa_alugar %></td>
+          <td><%= link_to 'Edit', edit_casa_alugar_path(casa_alugar) %></td>
+          <td><%= link_to 'Destroy', casa_alugar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
+
     </tbody>
   </table>
 </div>

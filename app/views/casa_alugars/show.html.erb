@@ -1,59 +1,70 @@
-<p id="notice"><%= notice %></p>
+<style>
 
-<p>
-  <strong>Local:</strong>
-  <%= @casa_alugar.local %>
-</p>
+  body{
+    background-color:#6482b3;
+  }
 
-<p>
-  <strong>Metragem:</strong>
-  <%= @casa_alugar.metragem %>
-</p>
+</style>
 
-<p>
-  <strong>Banheiros:</strong>
-  <%= @casa_alugar.banheiros %>
-</p>
 
-<p>
-  <strong>Suites:</strong>
-  <%= @casa_alugar.suites %>
-</p>
-
-<p>
-  <strong>Cozinhas:</strong>
-  <%= @casa_alugar.cozinhas %>
-</p>
-
-<p>
-  <strong>Quartos:</strong>
-  <%= @casa_alugar.quartos %>
-</p>
-
-<p>
-  <strong>Salas:</strong>
-  <%= @casa_alugar.salas %>
-</p>
-
-<p>
-  <strong>Garagem:</strong>
-  <%= @casa_alugar.garagem %>
-</p>
-
-<p>
-  <strong>Preco:</strong>
-  <%= @casa_alugar.preco %>
-</p>
-
-<p>
-  <strong>Condominio:</strong>
-  <%= @casa_alugar.condominio %>
-</p>
-
-<p>
-  <strong>Desconto:</strong>
-  <%= @casa_alugar.desconto %>
-</p>
-
-<%= link_to 'Edit', edit_casa_alugar_path(@casa_alugar) %> |
-<%= link_to 'Back', casa_alugars_path %>
+<body>
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>Local:</strong>
+    <%= @casa_alugar.local %>
+  </p>
+  
+  <p>
+    <strong>Metragem:</strong>
+    <%= @casa_alugar.metragem %>
+  </p>
+  
+  <p>
+    <strong>Banheiros:</strong>
+    <%= @casa_alugar.banheiros %>
+  </p>
+  
+  <p>
+    <strong>Suites:</strong>
+    <%= @casa_alugar.suites %>
+  </p>
+  
+  <p>
+    <strong>Cozinhas:</strong>
+    <%= @casa_alugar.cozinhas %>
+  </p>
+  
+  <p>
+    <strong>Quartos:</strong>
+    <%= @casa_alugar.quartos %>
+  </p>
+  
+  <p>
+    <strong>Salas:</strong>
+    <%= @casa_alugar.salas %>
+  </p>
+  
+  <p>
+    <strong>Garagem:</strong>
+    <%= @casa_alugar.garagem %>
+  </p>
+  
+  <p>
+    <strong>Preco:</strong>
+    <%= @casa_alugar.preco %>
+  </p>
+  
+  <p>
+    <strong>Condominio:</strong>
+    <%= @casa_alugar.condominio %>
+  </p>
+  
+  <p>
+    <strong>Desconto:</strong>
+    <%= @casa_alugar.desconto %>
+  </p>
+  
+  <%= link_to 'Edit', edit_casa_alugar_path(@casa_alugar) %> |
+  <%= link_to 'Back', casa_alugars_path %>
+</body>
